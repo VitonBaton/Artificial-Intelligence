@@ -1,8 +1,12 @@
 ﻿using ArtificialIntelligence.ProductionModel;
+using ArtificialIntelligence.SemanticModel;
+using KnowledgeBase = ArtificialIntelligence.ProductionModel.KnowledgeBase;
 
 // TestDirectChain();
 
-TestReversedChain();
+//TestReversedChain();
+
+TestSemanticModel();
 
 void TestDirectChain()
 {
@@ -42,4 +46,13 @@ void TestReversedChain()
         Console.WriteLine("Подходящий телефон не найден");
     }
     
+}
+
+void TestSemanticModel()
+{
+    var knowledgeBase = new ArtificialIntelligence.SemanticModel.KnowledgeBase();
+
+    var node = knowledgeBase.Client;
+    
+    ViewModel.Show(2, node);
 }
